@@ -1,7 +1,5 @@
 docker-mongodb-gcp-backup
 ============
-
-# Description
 Backup your MongoDB to your Google Cloud Storage bucket.
 
 # Add Credentials
