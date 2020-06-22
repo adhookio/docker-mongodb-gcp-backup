@@ -17,6 +17,12 @@ fi
 mv dump mongodb-$TIMESTAMP
 tar cf mongodb-$TIMESTAMP.tar mongodb-$TIMESTAMP
 cp mongodb-$TIMESTAMP.tar /root
+
+# Replace secrets in .boto file
+sed -i "s/accesskey/$GS_ACCESS_KEY/g" /root/.boto
+sed -i "s/secretkey/$GS_SECRET_ACCESS_KEY/g" /root/.boto
+
+
 # Upload to gcp
 cd /root && ls -a && gsutil cp mongodb-$TIMESTAMP.tar ${GS_URL}
 
