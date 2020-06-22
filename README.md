@@ -23,7 +23,7 @@ The params ```MONGO_USER``` and ```MONGO_PASSWORD``` are optional.
     crontab -e 
 
     # m h  dom mon dow   command
-    30 2 * * *     docker run -i -e MONGO_HOST=<<Your MongoDB Host>> -e MONGO_DATABASE=<<Your MongoDB>> -e MONGO_USER=<<DATABASE_USER>> -e MONGO_PASSWORD=<<DATABASE_PW>> -e GS_URL=gs://adhook-mongodb-backup  --rm  adhook/docker-mongodb-gcp-backup
+    30 2 * * *     docker run -i -e MONGO_HOST=<<Your MongoDB Host>> -e MONGO_DATABASE=<<Your MongoDB>> -e MONGO_USER=<<DATABASE_USER>> -e MONGO_PASSWORD=<<DATABASE_PW>> -e GS_URL=gs://adhook-mongodb-backup  --rm  docker.pkg.github.com/adhookio/docker-mongodb-gcp-backup/docker-mongodb-gcp-backup:latest
 
 
     
