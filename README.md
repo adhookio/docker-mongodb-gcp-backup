@@ -9,7 +9,7 @@ Backup your MongoDB to your Google Cloud Storage bucket.
         -e MONGO_DATABASE=<<DATABASE_NAME> 
         -e MONGO_USER=<<DATABASE_USER>> \
         -e MONGO_PASSWORD=<<DATABASE_PW>> \ 
-        -e GS_URL=gs://adhook-mongodb-backup \  
+        -e GS_URL=<<GS_URL>> \  
         -e GS_ACCESS_KEY=<<GS_ACCESS_KEY>> \
         -e GS_SECRET_ACCESS_KEY=<<GS_SECRET_ACCESS_KEY>> \
         --rm  docker.pkg.github.com/adhookio/docker-mongodb-gcp-backup/docker-mongodb-gcp-backup:latest
