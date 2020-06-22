@@ -1,0 +1,18 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/adhookio/docker-mongodb-gcp-backup/docker-mongodb-gcp-backup:latest && echo "${{ secrets.PUBLISH_PASSWORD }}" | docker login docker.pkg.github.com -u "${{ secrets.PUBLISH_USER }}" --password-stdin && docker push docker.pkg.github.com/adhookio/docker-mongodb-gcp-backup/docker-mongodb-gcp-backup:latest
