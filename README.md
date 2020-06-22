@@ -1,4 +1,4 @@
-# Docker Mongodb GCP Backup
+# Docker Mongodb GCP Backup ![Docker Image CI](https://github.com/adhookio/docker-mongodb-gcp-backup/workflows/Docker%20Image%20CI/badge.svg?branch=master)
 
 Backup your MongoDB to your Google Cloud Storage bucket.
 
